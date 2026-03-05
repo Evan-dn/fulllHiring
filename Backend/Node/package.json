@@ -1,0 +1,28 @@
+{
+  "name": "fleet-management",
+  "version": "1.0.0",
+  "license": "proprietary",
+  "scripts": {
+    "test": "npm run test:unit && npm run test:bdd && npm run test:bdd:sql",
+    "test:unit": "jest",
+    "test:bdd": "cucumber-js",
+    "test:bdd:sql": "USE_DB=1 cucumber-js --profile sql"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.0.0",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^20.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "postgres": "^3.4.8"
+  }
+}
